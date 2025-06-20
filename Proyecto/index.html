@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inversiones el sapo de oro</title>
+</head>
+<style>
+    
+</style>
+<body>
+        <div class="titulo"><h1>Calculadora de Prima Colombia</h1></div>
+        
+        
+       
+        <div class="cuadro">
+            <div class="cuadro-interno">
+
+                <div class="campo">
+                <label for="ingresos">Ingresos mensuales</label>
+                <input type="text" id="ingresos" pattern="[0-9.]+" title="Solo números y puntos permitidos. Ej:100,000" placeholder="Ingresos Mensuales" required oninput="formatCurrency(this); updateCalcularPrimaButton();">
+                <span class="disclaimerSpan">*Este campo es obligatorio</span>
+            </div>
+
+            <div class="campo">
+                <label for="diasLaborados">Días laborados</label>
+                <input type="number" id="diasLaborados" min="1" max="180" placeholder="Ingrese días laborados (entre 1 y 180)" required>
+                <span id="errorDiasLaborados" class="error-message"></span>
+            </div>
+
+            </div>
+            
+
+            <div>
+                <button type="button" id="calcularPrima" class="btn-cal-prima" disabled>Calcular</button>
+            </div>
+
+            <div id="resultadoPrima" class="resultado-prima" style=" margin-top: 1em;  font-weight: bold; font-size: 20px;color: #28a745;text-align: center;"></div>
+            <a  id="boton-invertir"  class="btn-invertir" href="ecommerce.html" target="_blank">Quiero invertir</a>
+            <p id="mensajeFinal"  class="frase-motivacional">Dime cuánto inviertes y te diré qué tan rápido alcanzas tus metas financieras</p>
+
+    
+
+
+        </div>
+    
+        <script src="main.js"></script>
+</body>
+</html>

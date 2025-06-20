@@ -1,0 +1,162 @@
+body{
+        margin: 0;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        flex-direction: column;
+    }
+
+    .titulo{
+        width: 500px;
+    }
+    .titulo h1{
+        margin-bottom:0px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+ 
+
+    .frase-motivacional{
+        display: none; 
+        font-weight: bold;
+        margin-bottom: 15px;
+        margin-top: 0px;
+        font-size: 16px;
+        text-align: center;
+        color: #28a745;
+    }
+
+    .cuadro{
+        width: 350px;
+        height: 220px;
+        background-color: #4e4e4e;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 6px;
+    }
+
+     .cuadro-interno{
+        width: 300px;
+    }
+
+    .campo{
+        width: 100%;
+        text-align: left;
+        padding-top: 12px;
+    }
+
+    label{
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+
+       
+    }
+
+    input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .btn-cal-prima{
+        background-color: #4a82e2;
+        color: #fff;
+        border-radius: 12px;
+        border: none;
+        font-size: 16px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width:320px;
+        height: 30px;
+        transition: all 0.3s ease;
+   }
+
+     .btn-cal-prima:disabled{
+        cursor: not-allowed;
+   }
+
+   .disclaimerSpan{
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+   }
+
+   .error-message{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700px;
+    line-height: 20px;
+   }
+
+   #ingresos{
+    --wpr-bg-ad65df24-a5c4-4be5-a898-148392ac2e58: url(https://www.tyba.com.co/wp-content/uploads/2023/12/Informative-1.png);
+   }
+
+   #ingresos{
+    background-image: var(--wpr-bg-ad65df24-a5c4-4be5-a898-148392ac2e58);
+    background-repeat: no-repeat;
+    background-position: 6px 3px;
+    text-indent: 25px;
+   }
+
+   .btn-invertir{
+    display: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+   }
+
+
+
+    @media screen and (max-width:480px) {
+    .titulo{
+        width: 300px;
+    }
+    .cuadro{
+        width: 300px;
+        height: 220px;
+        background-color: #4CAF50;
+    }
+
+    .cuadro-interno{
+        width: 260px;
+    }
+
+    .btn-cal-prima:disabled{
+        width:260px;
+    }
+
+    .titulo h2{
+        font-size: 16px;
+    }
+
+    }
