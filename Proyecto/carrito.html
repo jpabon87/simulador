@@ -11,24 +11,24 @@
     <div class="wrapper">
         <aside>
             <header>
-                <h1 class="logo">Sapo de Oro</h1>
+                 <h1 class="logo">Sapo de Oro</h1>
             </header>
             <nav>
                 <ul>
                     <li>
-                        <a class="boton-menu boton-carrito active" href="carrito.html" target="_blank">
+                        <a class="boton-menu boton-carrito" href="ecommerce.html" target="_self">
                            <i class="bi bi-arrow-up-left-circle-fill"></i>Seguir comprando
                         </a>
                     </li>  
                     <li>
-                        <a class="boton-menu boton-carrito active" href="carrito.html" target="_blank">
+                        <a class="boton-menu boton-carrito active" href="carrito.html" target="_self">
                             <i class="bi bi-bag-check"></i>Carrito
                         </a>
                     </li>
                 </ul>
             </nav>
             <footer>
-                <p> ® Sapo de oro 2025</p>
+                <p class="texto-footer"> ® Sapo de oro 2025</p>
             </footer>
         </aside>
         <main>
@@ -36,8 +36,9 @@
             <div class="contenedor-carrito">
                 <p class="carrito-vacio">Tu carrito esta vacío <i class="bi bi-emoji-frown"></i></p>
                 
+                <div class="carrito-productos disabled">
                 <div class="carrito-producto">
-                    <img src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
+                    <img class="carrito-producto-imagen" src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
                     <div class="carrito-producto-titulo">
                         <small>Título</small>
                         <h3>Ecopetrol</h3>
@@ -58,7 +59,7 @@
                 </div>
 
                  <div class="carrito-producto">
-                    <img src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
+                    <img class="carrito-producto-imagen" src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
                     <div class="carrito-producto-titulo">
                         <small>Título</small>
                         <h3>Uber</h3>
@@ -77,9 +78,10 @@
                     </div>
                     <button class="carrito-accion-eliminar"> <i class="bi bi-trash-fill"></i> </button>
                 </div>
-            </div>
+                </div>
+            
 
-            <div class="carrito-acciones">
+            <div class="carrito-acciones disabled">
                 <div class="carrito-acciones-izquierda">
                     <button class="carrito-acciones-vaciar">Vaciar carrito</button>
                 </div>
@@ -90,6 +92,12 @@
                     </div>
                     <button class="carrito-acciones-comprar">Comprar ahora</button>
                 </div>
+            </div>
+
+            <p class="carrito-comprado disabled">Muchas gracias por tu compra <i class="bi bi-emoji-laughing"></i></p>
+
+
+
             </div>
         </main>
     </div>

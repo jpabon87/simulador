@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="errorDiasLaborados">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,79 +13,54 @@
             <header>
                 <h1 class="logo">Sapo de Oro</h1>
             </header>
-            <nav>
-                <ul>
+            <nav >
+                <ul class="menu">
                     <li>
-                        <button class="boton-menu boton-categoria active" >
-                             <i class="bi bi-rocket-takeoff-fill"></i>Todas las acciones</li>
+                        <button id="todos" class="boton-menu boton-categoria active" >
+                             <i class="bi bi-rocket-takeoff-fill"></i>Todas las acciones
                         </button>
+                    </li>    
                     <li>
-                        <button class="boton-menu boton-categoria">
+                        <button id="colombia" class="boton-menu boton-categoria">
                             <i class="bi bi-rocket-takeoff"></i>Colombia
                         </button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria">
+                        <button id="global" class="boton-menu boton-categoria">
                             <i class="bi bi-rocket-takeoff"></i>Global
                         </button>
                     </li>
                     <li>
-                        <button class="boton-menu boton-categoria">
+                        <button id="etf" class="boton-menu boton-categoria">
                             <i class="bi bi-rocket-takeoff"></i>ETF
                         </button>
                     </li>
                     <li>
-                        <a class="boton-menu boton-carrito" href="https://www.google.com/">
-                            <i class="bi bi-bag-check"></i>Carrito <span class="numerito">0</span>
+                        <a class="boton-menu boton-carrito " href="carrito.html">
+                            <i class="bi bi-bag-check"></i>Carrito <span id="numerito" class="numerito">0</span>
                         </a>
                     </li>
                 </ul>
             </nav>
             <footer>
-                <p> ® Sapo de oro 2025</p>
+                <p class="texto-footer"> ® Sapo de oro 2025</p>
             </footer>
         </aside>
         <main>
-            <h2 class="titulo-principal">Todas las acciones</h2>
-            <div class="contenedor-acciones">
-                 <div class="producto">
-                    <img src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
-                    <div class="acciones-detalles">
-                        <h3 class="accion-titulo">Ecopetrol</h3>
-                        <p class="accion-precio">$1.000.000</p>
-                        <button class="accion-agregar">Agregar</button>
-                   </div>
-                </div>
-                <div class="producto">
-                    <img src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
-                    <div class="acciones-detalles">
-                        <h3 class="accion-titulo">Nike</h3>
-                        <p class="accion-precio">$1.000.000</p>
-                        <button class="accion-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
-                    <div class="acciones-detalles">
-                        <h3 class="accion-titulo">Nubank</h3>
-                        <p class="accion-precio">$1.000.000</p>
-                        <button class="accion-agregar">Agregar</button>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img src="https://saaeuecpprdpecp.blob.core.windows.net/web/esp/manual-de-identidad/images/imggrupo.png" alt="">
-                    <div class="acciones-detalles">
-                        <h3 class="accion-titulo">Uber</h3>
-                        <p class="accion-precio">$1.000.000</p>
-                        <button class="accion-agregar">Agregar</button>
-                    </div>
-                </div>
+            <h1 id="mensajeBienvenida"></h1>
+            <h2 class="titulo-principal" id="titulo-principal">Todas las acciones</h2>
+            
+            <div id="contenedor-acciones-id" class="contenedorAcciones">
+                <!--Esto se va a rellenar con JS-->
             </div>
         </main>
     </div>
 
 
-
+    <script src="acciones.js"></script>
     <script src="main.js"></script>
+   
+  
+  
 </body>
 </html>

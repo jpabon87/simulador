@@ -12,6 +12,7 @@
 <body>
         <div class="titulo"><h1>Calculadora de Prima Colombia</h1></div>
         
+        <img src="" alt="">
         
        
         <div class="cuadro">
@@ -29,6 +30,13 @@
                 <span id="errorDiasLaborados" class="error-message"></span>
             </div>
 
+            <div class="campo">
+                <label for="suNombre">¿Cuál es su nombre?</label>
+                <input type="text" id="suNombre" placeholder="Escriba aquí su nombre" required>
+                <span class="disclaimerSpan">*Este campo es obligatorio</span><br>
+                <span id="errorNombre" class="errorMensaje"></span>
+            </div>
+
             </div>
             
 
@@ -39,10 +47,6 @@
             <div id="resultadoPrima" class="resultado-prima" style=" margin-top: 1em;  font-weight: bold; font-size: 20px;color: #28a745;text-align: center;"></div>
             <a  id="boton-invertir"  class="btn-invertir" href="ecommerce.html" target="_blank">Quiero invertir</a>
             <p id="mensajeFinal"  class="frase-motivacional">Dime cuánto inviertes y te diré qué tan rápido alcanzas tus metas financieras</p>
-
-    
-
-
         </div>
     
         <script src="main.js"></script>

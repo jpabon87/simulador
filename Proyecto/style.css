@@ -34,7 +34,7 @@ body{
 
     .cuadro{
         width: 350px;
-        height: 220px;
+        height: 305px;
         background-color: #4e4e4e;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -102,13 +102,14 @@ body{
     line-height: 18px;
    }
 
-   .error-message{
+   .error-message, .errorMensaje{
     color: red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 14px;
     font-weight: 700px;
     line-height: 20px;
    }
+
 
    #ingresos{
     --wpr-bg-ad65df24-a5c4-4be5-a898-148392ac2e58: url(https://www.tyba.com.co/wp-content/uploads/2023/12/Informative-1.png);

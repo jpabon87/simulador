@@ -1,4 +1,6 @@
+    console.log('main.js cargado en ecommerce.html');
 
+    
     function formatCurrency(input) {
         let value = input.value.replace(/\D/g, '');
         if (value) {
@@ -8,25 +10,43 @@
         }
     }
 
-    function updateCalcularPrimaButton() {
+    function updateCalcularPrimaButton() {    
         const ingresosInput = document.getElementById("ingresos");
         const diasInput = document.getElementById("diasLaborados");
+        const nombreInput = document.getElementById("suNombre");
         const button = document.getElementById("calcularPrima");
         const errorDias = document.getElementById("errorDiasLaborados");
+        const errorNombre = document.getElementById("errorNombre");
 
+        //Validar ingresos
         const ingresosValue = ingresosInput.value.replace(/\D/g, '');
-        const ingresosValido = ingresosValue && !isNaN(Number(ingresosValue));
+        const ingresosValido = ingresosValue.length > 0 && !isNaN(Number(ingresosValue));
 
+        //Validar días
         const dias = parseInt(diasInput.value, 10);
         const diasValido = dias >= 1 && dias <= 180;
 
+        //Mostrar error si días no es válido
         if (!diasValido && diasInput.value !== '') {
             errorDias.textContent = "Debe ingresar un número entre 1 y 180";
         } else {
             errorDias.textContent = "";
         }
 
-        button.disabled = !(ingresosValido && diasValido);
+        //Validar nombre
+        const nombreValido = nombreInput.value.trim() !== '';
+
+        //Mostrar error si nombre no es válido
+        if (!nombreValido && nombreInput.value !== ''){
+            errorNombre.textContent = "Por favor escriba su nombre"
+        }else{
+            errorNombre.textContent = "";
+        }
+
+        //Habilitar o desabilitar el botón
+        button.disabled = !(ingresosValido && diasValido && nombreValido);
+
+
     }
 
     function calcularPrima() {
@@ -54,9 +74,31 @@
         resultadoDiv.textContent = `La prima que deberías recibir es: ${primaFormateada}`;
         botonInvertir.style.display = "block";
         mensaje.style.display = "block"; // Mostrar el mensaje cuando hay resultado
+
+
+        // Aqupi se guarda el nombre LocalStorage
+        const nombre = document.getElementById("suNombre").value.trim();
+        localStorage.setItem('nombreUsuario', nombre);
     }
 
-    // Listeners
-    document.getElementById("diasLaborados").addEventListener("input", updateCalcularPrimaButton);
+    //LocalStorage
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const mensaje = document.getElementById('mensajeBienvenida');
+    if (mensaje) {
+        const nombre = localStorage.getItem('nombreUsuario');
+        if (nombre) {
+            mensaje.textContent = `Hola ${nombre}, vamos a invertir`;
+        } else {
+            mensaje.textContent = `¡Hola! vamos a invertir`;
+        }
+    }
+});
+
+
+    // Listeners para que la función se ejecute
+    document.getElementById("ingresos").addEventListener('input', updateCalcularPrimaButton);
+    document.getElementById("diasLaborados").addEventListener('input', updateCalcularPrimaButton);
+    document.getElementById("suNombre").addEventListener('input', updateCalcularPrimaButton);
     document.getElementById("calcularPrima").addEventListener("click", calcularPrima);
 
